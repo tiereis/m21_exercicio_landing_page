@@ -1,0 +1,58 @@
+@use 'variables' as v;
+
+.hero-section {
+    position: relative;
+    height: 70vh; // Altura da viewport
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: v.$color-text-light;
+    text-align: center;
+    background-image: url('https://placehold.co/1920x1080/6C5B7B/FFFFFF?text=Carpe+Diem+Movie+Scene'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); // Escurece a imagem de fundo
+        z-index: 1;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        padding: v.$padding-item;
+        max-width: 800px;
+    }
+
+    &__title {
+        font-family: v.$font-family-title;
+        font-size: 3.5em;
+        margin-bottom: 20px;
+        color: v.$color-text-light;
+    }
+
+    &__subtitle {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    &__cta-button {
+        display: inline-block;
+        background-color: v.$color-button-bg;
+        color: v.$color-text-light;
+        padding: 15px 30px;
+        border-radius: v.$border-radius-default;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: v.$color-button-hover;
+        }
+    }
+}

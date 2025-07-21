@@ -1,0 +1,54 @@
+@use 'variables' as v;
+
+.themes-section {
+    padding: v.$padding-section-y 0;
+    background-color: v.$color-header-bg; // Fundo mais escuro para esta seção
+    color: v.$color-text-light;
+
+    .section-title {
+        color: v.$color-text-light; // Título branco nesta seção
+        &--highlight {
+            color: v.$color-accent-green; // Destaque verde
+        }
+    }
+
+    &__container {
+        max-width: v.$container-max-width;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // 3 colunas no desktop
+        gap: v.$gap-grid;
+        justify-items: center;
+    }
+
+    &__item {
+        background-color: rgba(255, 255, 255, 0.05); // Um leve fundo para os cards
+        padding: v.$padding-item;
+        border-radius: v.$border-radius-default;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        img {
+            width: 100px; // Tamanho fixo para ícones
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        &-title {
+            font-family: v.$font-family-title;
+            font-size: 1.5em;
+            color: v.$color-text-light;
+            margin-bottom: 10px;
+        }
+
+        &-description {
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}

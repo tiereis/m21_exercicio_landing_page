@@ -1,0 +1,22 @@
+{
+  "name": "m21_exercicio_landing_page",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "gulp",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["landing-page", "html", "sass", "javascript", "gulp", "poetas-mortos"],
+  "author": "Tiê Reis",
+  "license": "ISC",
+  "description": "Landing page para o filme 'A Sociedade dos Poetas Mortos' com Gulp, SASS e JS.",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-rename": "^2.1.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.89.2"
+  }
+}

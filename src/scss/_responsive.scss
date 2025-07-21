@@ -1,0 +1,97 @@
+@use 'variables' as v;
+
+// Tablet (de 768px até 1023px)
+@media (max-width: calc(v.$breakpoint-desktop - 1px)) { /* Começa a partir de 1023px para baixo */
+    .header {
+        &__container {
+            flex-direction: column;
+            gap: 15px;
+        }
+        &__nav-list {
+            justify-content: center;
+        }
+        &__nav-item {
+            margin: 0 15px;
+        }
+    }
+
+    .hero-section__title {
+        font-size: 2.8em;
+    }
+    .hero-section__subtitle {
+        font-size: 1.1em;
+    }
+
+    .about-section__content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .about-section__image {
+        width: 60%;
+    }
+
+    .themes-section__grid {
+        grid-template-columns: repeat(2, 1fr); // 2 colunas no tablet
+        gap: v.$gap-grid;
+    }
+
+    .gallery-section__grid {
+        grid-template-columns: repeat(2, 1fr); // 2 colunas na galeria para tablet
+    }
+}
+
+// Mobile (até 767px)
+@media (max-width: calc(v.$breakpoint-tablet - 1px)) { /* Começa a partir de 767px para baixo */
+    .header {
+        padding: 15px 0;
+        &__logo img {
+            width: 120px;
+        }
+        &__nav-item {
+            margin: 0 10px;
+        }
+    }
+
+    .hero-section__title {
+        font-size: 2.2em;
+    }
+    .hero-section__subtitle {
+        font-size: 1em;
+    }
+
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    .about-section__image {
+        width: 80%; /* Mais largo no mobile */
+    }
+
+    .themes-section__grid {
+        grid-template-columns: 1fr; // 1 coluna no mobile
+        gap: v.$gap-grid;
+    }
+
+    .gallery-section__grid {
+        grid-template-columns: 1fr; // 1 coluna na galeria para mobile
+    }
+}
+
+// Pequenas telas mobile (até 479px)
+@media (max-width: calc(v.$breakpoint-mobile-small - 1px)) {
+    .header__nav-item {
+        margin: 0 5px;
+    }
+    .hero-section__title {
+        font-size: 1.8em;
+    }
+    .hero-section__subtitle {
+        font-size: 0.9em;
+    }
+    .hero-section__cta-button {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,36 @@
+@use 'variables' as v;
+
+.gallery-section {
+    padding: v.$padding-section-y 0;
+    background-color: v.$color-primary-bg;
+
+    &__container {
+        max-width: v.$container-max-width;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // 3 colunas no desktop
+        gap: v.$gap-grid / 2; // Espaçamento menor para galeria
+    }
+
+    &__item {
+        overflow: hidden;
+        border-radius: v.$border-radius-default;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        img {
+            width: 100%;
+            height: 200px; // Altura fixa para as imagens da galeria
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

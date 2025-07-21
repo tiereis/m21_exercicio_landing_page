@@ -1,0 +1,35 @@
+@use 'variables' as v;
+
+.about-section {
+    padding: v.$padding-section-y 0;
+    background-color: v.$color-primary-bg;
+
+    &__container {
+        max-width: v.$container-max-width;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    &__content {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    &__image {
+        width: 40%; // Ocupa 40% da largura no desktop
+        max-width: 500px;
+        height: auto;
+        border-radius: v.$border-radius-default;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &__text {
+        flex: 1; // Ocupa o restante do espaço
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            text-align: justify;
+        }
+    }
+}

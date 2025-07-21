@@ -1,0 +1,41 @@
+@use 'variables' as v;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: v.$font-family-body;
+    line-height: 1.6;
+}
+
+body {
+    background-color: v.$color-primary-bg;
+    color: v.$color-text-dark;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: v.$container-max-width;
+    margin: 0 auto;
+    padding: 0 15px; // Padding lateral para telas menores que o max-width
+}
+
+.section-title {
+    font-family: v.$font-family-title;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: v.$color-text-dark;
+
+    &--highlight {
+        color: v.$color-accent-purple;
+    }
+}

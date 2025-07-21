@@ -1,0 +1,25 @@
+// Cores
+$color-primary-bg: #F0EDE6; // Creme antigo, como papel/livro
+$color-text-dark: #3D3930;  // Marrom escuro, sépia
+$color-accent-purple: #6C5B7B; // Roxo escuro, melancólico, acadêmico
+$color-accent-green: #80B15C;  // Verde musgo/floresta
+$color-button-bg: #A0522D;  // Marrom terroso, livros antigos
+$color-button-hover: darken($color-button-bg, 10%);
+$color-header-bg: #262626;  // Quase preto
+$color-text-light: #FFFFFF; // Branco puro para texto em fundos escuros
+
+// Fontes
+$font-family-title: 'Playfair Display', serif; // Mais elegante para títulos
+$font-family-body: 'Roboto', sans-serif;       // Limpa para corpo de texto
+
+// Espaçamentos & Dimensões
+$container-max-width: 1100px;
+$padding-section-y: 60px;
+$padding-item: 20px;
+$border-radius-default: 8px;
+$gap-grid: 30px;
+
+// Breakpoints
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile-small: 480px;

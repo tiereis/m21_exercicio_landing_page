@@ -1,0 +1,48 @@
+@use 'variables' as v;
+
+.header {
+    background-color: v.$color-header-bg;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: v.$container-max-width;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    &__logo {
+        margin: 0;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block; // Remove espaço abaixo da imagem
+        }
+    }
+
+    &__nav-list {
+        display: flex;
+    }
+
+    &__nav-item {
+        margin-left: 30px;
+    }
+
+    &__nav-link {
+        color: v.$color-text-light;
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: v.$color-accent-green;
+        }
+    }
+}
